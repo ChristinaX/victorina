@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<body>
+
+<canvas id="canvas" width="470" height="500" style="background-color:#696969"></canvas>
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var grad;
+var width = canvas.width;
+var height = canvas.height;
+var i=0;
+var j = 0;
+var symbol = ['C','=','/','*','+','-'];
+ctx.translate(width*0.08, height*0.08);
+  ctx.beginPath();
+ctx.fillStyle = '#DCDCDC';
+    ctx.rect(0, 0, width*0.85,height*0.1);
+    ctx.fill();
+grad = ctx.createRadialGradient(0,0,400, 0,0,0);
+grad.addColorStop(0, '#333');
+grad.addColorStop(0.7, 'white');
+grad.addColorStop(1, '#333');
+ctx.strokeStyle = grad;
+ ctx.lineWidth = width/4*0.1;
+ctx.stroke();
+ctx.translate(width*0.001, height*0.2);
+ctx.beginPath();
+    ctx.rect(0, 0, width*0.85,height*0.6);
+    ctx.fillStyle = '#DCDCDC';
+    ctx.fill()
+grad = ctx.createRadialGradient(0,0,400, 0,0,0);
+grad.addColorStop(0, '#333');
+grad.addColorStop(0.5, 'white');
+grad.addColorStop(1, '#333');
+ctx.strokeStyle = grad;
+ctx.lineWidth = width/4*0.1;
+ctx.stroke();
+
+var grad=ctx.createRadialGradient(5,5,200,5,5,0);
+grad.addColorStop(0, '#333');
+grad.addColorStop(0.5, 'white');
+grad.addColorStop(1, '#333');
+ctx.font = height/2*0.15 + "px arial";
+ctx.textBaseline="middle";
+ctx.textAlign="center";
+ctx.translate(width/2*0.1, height*0.08);
+for(num= 1; num < 6; num++){
+if (num < 4) {
+ctx.fillStyle = grad;
+ctx.fillRect(0,0,50,40);
+ctx.translate(width/2*0.1, height*0.05);
+ctx.fillStyle = 'white';
+ctx.fillText(num, 0, 0);
+ctx.translate(width/2*0.2, -height*0.05);
+}
+else {
+ctx.translate(width/2*(0.1+i), -height*(0.0009+j));
+ctx.fillStyle = grad;
+ctx.fillRect(0,0,50,40);
+ctx.translate(width/2*0.1, height*0.05);
+ctx.fillStyle = 'white';
+ctx.fillText(symbol[num-4], 0, 0);
+i=0.1;
+j=0.05;
+}
+}
+ctx.translate(width/2*(0.1+i), -height*(0.0009+j));
+ctx.fillStyle = grad;
+ctx.fillRect(0,0,50,40);
+ctx.translate(width/2*0.1, height*0.05);
+ctx.fillStyle = 'white';
+ctx.fillText(4, 0, 0);
+</script>
+</body>
+</html>

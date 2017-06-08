@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="myscripts5.js"></script>
+    <script type="text/javascript" src="jquery-color.js"></script>
+<script type="text/javascript">
+  function animateText(id, text, i) {
+    document.getElementById(id).innerHTML = text.substring(0, i);
+    i++;
+    if (i <= text.length)
+    setTimeout("animateText('" + id + "','" + text + "'," + i + ")", 100);
+  }
+</script>
+<style>
+    #time11 {
+	height: 10px;
+	width: 10px;
+	background-color: #000000;
+	position: absolute;
+	margin-top: 200px;
+	margin-left: 200px;
+    }
+    #time134 {
+	position: absolute;
+	color: #ff0000;
+    }
+    #time5 {
+	position: absolute;
+	color: #ff0000;
+    }
+</style>
+</head>
+<body>
+<svg width="1350" height="1000">
+  <circle cx="350" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+  <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+  <rect x="400" y="0" width="150" height="150" style="fill:blue;stroke:pink;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />
+  <rect x="600" y="0" width="150" height="150"  style="fill:blue;stroke:pink;stroke-width:5;opacity:0.5" />
+  <rect x="770" y="5" rx="30" ry="30" width="150" height="150" style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+  <circle cx="970" cy="50" r="40" stroke="black" stroke-width="5" fill="red" />
+  <circle cx="970" cy="130" r="40" stroke="black" stroke-width="5" fill="orange" />
+  <circle cx="970" cy="210" r="40" stroke="black" stroke-width="5" fill="green" />
+   <ellipse cx="100" cy="180" rx="100" ry="30" style="fill:yellow;stroke:purple;stroke-width:2" />
+ <ellipse cx="240" cy="350" rx="220" ry="30" style="fill:purple" />
+  <ellipse cx="220" cy="300" rx="190" ry="20" style="fill:lime" />
+  <ellipse cx="210" cy="265" rx="170" ry="15" style="fill:yellow" />
+
+  <ellipse cx="820" cy="350" rx="90" ry="120" style="fill:yellow" />
+  <ellipse cx="790" cy="350" rx="50" ry="90" style="fill:white" />
+  <line x1="0" y1="500" x2="200" y2="400" style="stroke:rgb(255,0,0);stroke-width:2" />
+  <polygon points="1020,5 1070,190 1200,210" style="fill:lime;stroke:purple;stroke-width:5" />
+  <polygon points="1050,200 970,400 1020,430 1150,380" style="fill:lime;stroke:purple;stroke-width:5" />
+  <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:nonzero;" />
+</svg
+</body>
+</html>

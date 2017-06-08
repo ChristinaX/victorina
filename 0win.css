@@ -1,0 +1,60 @@
+body {
+    
+    color: #FF0000;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #FAADCB;
+}
+
+a {
+    color: #FF0000;
+}
+
+#main {
+    margin-top: 300px;
+    
+}
+#mur1 {
+    position: fixed;
+    height: 0px;
+    width: 50px;
+    background-color: #9A3058;
+    top: 600px;
+    left: 0px;
+}
+
+#mur2 {
+    position: fixed;
+    height: 0px;
+    width: 50px;
+    background-color: #9A3058;
+    top: 0px;
+    right: 0px;
+}
+#mur3 {
+    position: fixed;
+    height: 50px;
+    width: 0px;
+    background-color: #9A3058;
+    top: 0px;
+    left: 0px;
+}
+#mur4 {
+    position: fixed;
+    height: 50px;
+    width: 0px;
+    background-color: #9A3058;
+    bottom: 0px;
+    left: 1400px;
+}
+#dem {
+    position: absolute;
+    left: 580px;
+}
+#how {
+    margin-top: -10px;
+}
+#over{
+    margin-top: 50px;
+}

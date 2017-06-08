@@ -1,0 +1,76 @@
+<html>
+<head>
+<script>
+window.onload = function() {
+var $ = {
+	radius  :     250, // радиус окружности 
+	speed   :     20 // скорость/задержка ( в js это мс, например 10 мс = 100 кадров в секунду)
+    }
+    var f = 0;
+    var s = 2 * Math.PI / 180; //Вычислим угол
+    var s1 =Math.PI / 180; //Вычислим угол
+    var elem = document.getElementById("shar");
+    var elem1 = elem;
+    var elem2 = document.getElementById("shar2");
+    setInterval(function() {
+	f+= s;
+	elem1.style.left =  300 + $.radius * Math.sin(f)  + 'px';
+	elem1.style.top =  300 + $.radius * Math.cos(f)  + 'px';
+    }, 30);
+}
+</script>
+<style>
+body {
+    background:#000000;
+}
+#shar {
+    position: absolute;
+    background:#6495c4;
+    width:30px;
+    height:30px;
+    left: 70px;
+    top: 40px;
+    border: 3px solid #fff;
+    cursor: pointer;
+        border-radius: 19px;
+       -webkit-border-radius: 19px;
+       -moz-border-radius: 19px;
+
+}
+#shar2 {
+    position: absolute;
+    background:#6495c4;
+    width:30px;
+    height:30px;
+    left: 10px;
+    top: 10px;
+    border: 3px solid #fff;
+    cursor: pointer;
+        border-radius: 19px;
+       -webkit-border-radius: 19px;
+       -moz-border-radius: 19px;
+
+}
+
+#round {
+    position: absolute; 
+    left: 50%;
+    margin-left: -250px; 
+    top: 100px; 
+    width: 500px; 
+    height: 500px;
+    border: 5px solid #6495c4;
+        border-radius: 250px;
+       -webkit-border-radius: 250px;
+       -moz-border-radius: 250px;
+    
+}
+</style>
+</head>
+<body>
+   <div id="round">
+       <div id = 'shar'></div>
+	<div id = 'shar2'></div>
+    </div>
+</body>
+</html>
